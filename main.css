@@ -441,6 +441,7 @@
     overflow: hidden;
     position: relative;
     width: 800px;
+    min-height: auto;
 }
 
 .carousel-images{
@@ -448,6 +449,7 @@
     display: flex;
     transform: translateX(0);
     transition: transform 0.25s;
+    min-height: auto;
 }
 
 .carousel-images img{
@@ -1151,6 +1153,7 @@
     
     .carousel{
         width: 250px;
+        min-height: auto;
     }
     
     .carousel button img{
@@ -1302,6 +1305,7 @@
 @media only screen and (min-width: 401px) and (max-width: 500px){
     .carousel{
         width: 350px;
+        min-height: auto;
     }
     
     .middle-info-compre img{
@@ -1336,6 +1340,7 @@
     
     .carousel{
         width: 450px;
+        min-height: auto;
     }
     
     .formulario label{
@@ -1393,6 +1398,7 @@
     
     .carousel{
         width: 500px;
+        min-height: auto;
     }
     
     .end-faixa p{
@@ -1496,6 +1502,7 @@
     
     .carousel{
         width: 600px;
+        min-height: auto;
     }
     
     .end-faixa p{
@@ -1567,6 +1574,7 @@
     
     .carousel{
         width: 700px;
+        min-height: auto;
         
     }
     
