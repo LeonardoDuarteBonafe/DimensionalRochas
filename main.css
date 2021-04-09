@@ -441,8 +441,6 @@
     overflow: hidden;
     position: relative;
     width: 800px;
-    min-height: auto;
-    
 }
 
 .carousel-images{
@@ -456,6 +454,7 @@
     width: 80%;
     margin: 0 10% 0 10%;;
     border-radius: 5px;
+    min-height: auto;
 }
 
 .carousel button {
