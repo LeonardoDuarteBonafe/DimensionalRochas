@@ -314,10 +314,11 @@ myFunction(x) // Call listener function at run time
 x.addListener(myFunction) // Attach listener function on state changes
     
     
+/*
 function pixel400(px400) {
 calculteImageWidth();
 carouselImages.style.transform = `translateX(${-(imageWidth * (imageIndex-1))}px)`;
-   /* if (px400.matches) 
+    if (px400.matches) 
     { // If media query matches
         carouselImages.style.transform = `translateX(${-(imageWidth * (imageIndex-1))}px)`;
         changeText();
@@ -326,7 +327,7 @@ carouselImages.style.transform = `translateX(${-(imageWidth * (imageIndex-1))}px
     else
     {
         
-    }  */   
+    }     
 //changeText();
 }  
 function pixel500(px500) {
@@ -368,6 +369,7 @@ pixel800(px800)
 px800.addListener(pixel800) 
 pixel900(px900)
 px900.addListener(pixel900) 
+*/
 
 });
 
