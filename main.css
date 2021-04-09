@@ -441,6 +441,7 @@
     overflow: hidden;
     position: relative;
     width: 800px;
+    min-height: auto;
     
 }
 
