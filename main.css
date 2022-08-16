@@ -19,6 +19,11 @@
 }
 
 @font-face{
+    src: url(Fonts/verdanai.ttf);
+    font-family: verdanaItalic;
+}
+
+@font-face{
     src: url(Fonts/Montserrat-Black.ttf);
     src: url(Fonts/Montserrat-BlackItalic.ttf);
     src: url(Fonts/Montserrat-Bold);
@@ -119,22 +124,8 @@
     font-size: 15px;
 }
 
-/*.nav-links ul li::after{
-    content: '';
-    width: 0;
-    height: 2px;
-    background: yellow;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.nav-links ul li:hover::after{
-    width: 100%;
-}*/
-
 .active{
-    
+
 }
 
 .active li{
@@ -209,6 +200,7 @@
     background-color: #56152C;
     text-align: right;
 }
+
 .middle-info-msg p{
     margin-top: 5px;
     font-size: 30px;
@@ -233,9 +225,86 @@
     display: grid;
 }
 
+.pisos-div1 .product-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pisos-div1 .product-container .product-box{
+    width: 200px;
+    height: 300px;
+    /background-color: aqua;
+    margin: 10px 25px;
+    /overflow: hidden;
+}
+
+.pisos-div1 .product-container .product-box img{
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    transition: 0.5s;
+    /cursor: pointer;
+}
+
+.pisos-div1 .product-container .product-box img:hover{
+    transform: scale(1.1);
+}
+
+.pisos-div1 .product-container .product-box p{
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center;
+    /background-color: yellow;
+    color: #A1A701;
+    font-family: verdanaItalic;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.frete{
+    font-size: 1.8rem;
+    text-align: center;
+    color: #A1A701;
+    font-family: montRegular;
+}
+
 .pisos-div1 img{
     width: 50%;
     margin: 2% 25% 3% 25%;
+}
+
+.product-separator{
+    /background-color: beige;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    margin: 20px 0 !important;
+}
+
+.product-separator .line1{
+    width: 25%;
+    height: 6px;
+    background-color: #A1A701;
+    //border-top-right-radius: 2px;
+    //border-bottom-right-radius: 2px;
+}
+
+.product-separator .line2{
+    width: 5%;
+}
+
+.product-separator .line3{
+    width: 70%;
+    background-color: #56152C;
+    height: 2px;
 }
 
 .middle-banner{
@@ -296,7 +365,6 @@
     width: 100%;
 }
 
-
 #imagem-alerta{
     margin-top: 15px;
     animation-duration: 2s;
@@ -319,15 +387,6 @@
     display: flex;
     align-items: center;
 }
-/*
-@keyframes appears{
-    0% {opacity: 0%;}
-    25% {opacity: 25%;}
-    50% {opacity: 50%;}
-    75% {opacity: 75%;}
-    100% {opacity: 100%;}
-}
-*/
 
 @keyframes appears{
     50% {transform: scale(1.05);}
@@ -337,18 +396,9 @@
     transform: scale(1.05);
     transition: 1s;
 }
-/*#imagem-alerta {
-  animation: blinker 5s linear;
-}
-@keyframes blinker {
-  50% { opacity: 0; }
-}
-@keyframes blin {
-  50% { opacity: 00; }
-}*/
 
 #imagem-alerta-infinito {
-  animation: blinker 2s linear infinite;
+    animation: blinker 2s linear infinite;
     transform: scale(1.02);
     z-index: 1;
 }
@@ -441,8 +491,7 @@
     overflow: hidden;
     position: relative;
     width: 800px;
-    height: auto;
-    align-self: flex-start;
+
 }
 
 .carousel-images{
@@ -450,16 +499,12 @@
     display: flex;
     transform: translateX(0);
     transition: transform 0.25s;
-    height: auto;
-    align-self: flex-start;
 }
 
 .carousel-images img{
     width: 80%;
     margin: 0 10% 0 10%;;
     border-radius: 5px;
-    height: auto;
-    align-self: flex-start;
 }
 
 .carousel button {
@@ -934,35 +979,35 @@
 }
 
 @media only screen and (max-width: 700px){
-    
+
     .hero{
         padding: 0;
         margin: 0;
     }
-    
+
     .vertical-bar{
         display: none;
     }
-    
+
     .fa-bars{
         right: 10px;
         top: 30px;
     }
-    
+
     .nav-bar{
         display: flex;
         padding: 0;
         justify-content: space-between;
     }
-    
+
     .fixed .initial-logo{
         width: 80px;
     }
-    
+
     .nav-bar div{
         padding-right: 20px;
     }
-    
+
     .nav-bar .fa{
         padding-right: 20px;
         padding-top: 15px;
@@ -973,18 +1018,18 @@
         cursor: pointer;
         text-align: right;
     }
-    
+
     .nav-links{
         z-index: 2;
         transition: 0.5s;
         width: 20px;
     }
-    
+
     .nav-links ul a{
         text-align: right;
         display: block;
     }
-    
+
     .nav-links ul a li{
         line-height: 1em;
         background-color: white;
@@ -997,95 +1042,90 @@
         margin-left: 25px;
         margin-top: 10px;
     }
- 
+
     #computadorLogos{
         display: none;
     }
-    
+
     #celularLogos{
         display: flex;
         padding-top: 4px;
         margin: 0;
         justify-content: center;
     }
-    
+
     #celularLogos img{
         width: 30px;
         padding: 2px;
     }
-    
-    /*
-    .hero{
-        margin: 0;
-        padding: 0;
-    }
-    
-    .nav-bar{
-        padding: 0;
-    }
-    
-    .nav-links{
-        padding: 0;
-        margin: 0;
-    }
-    
-    .nav-links ul{
-    }
-    
-    .fa fa-bars{
-        right: 10px;
-        top: 30px;
-    }
-    
-    .nav-bar .fa{
-        width: 100%;
-        display: block;
-        color: #56152C;
-        font-size: 30px;
-        cursor: pointer;
-        text-align: right;
-    }
-    
-    .nav-links ul a{
-        text-align: right;
-        display: block;
-        padding: 0 2px;
-    }
-    
-    .nav-links ul a li{
-        padding: 1% 3%;
-        line-height: 1em;
-        color: #56152C;
-    }
-    
-    .nav-bar i{
-        display: flex;
-        right: 0px;
-    }
-  */  
+
+
     .nav-logo{
         margin-top: 2%;
         margin-left: 5%;
     }
-    
+
     .nav-logo img{
         width: 100px;
         margin: 0;
     }
-    
+
     .social-logos{
         display: flex;
     }
-    
+
     .inicio-bloco{
         padding-bottom: 15px;
     }
-    
+
+    /*.pisos-div1 .product-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }*/
+    .pisos-div1 .product-container .product-box{
+        width: 150px;
+        height: 220px;
+        /background-color: aqua;
+        margin: 10px 25px;
+        /overflow: hidden;
+    }
+
+    .pisos-div1 .product-container .product-box img{
+        height: 150px;
+    }
+
+    .pisos-div1 .product-container .product-box img:hover{
+        transform: scale(1.1);
+    }
+
+    .pisos-div1 .product-container .product-box p{
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: center;
+        /background-color: yellow;
+        color: #A1A701;
+        font-family: verdanaItalic;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+
+    .frete{
+        font-size: 1.8rem;
+        text-align: center;
+        color: #A1A701;
+        font-family: montRegular;
+    }
+
     .middle-info-orcamento p a img{
         width: 50%;
         margin-left: 30%;
     }
-    
+
     .middle-info{
         width: 100%;
         justify-content: center;
@@ -1094,46 +1134,46 @@
         padding: 0;
         z-index: 1;
     }
-    
+
     .middle-info img{
         width: 50%;
         height: 50%;
         margin-left: 20px;
     }
-    
+
     .middle-info-msg{
         width: 70%;
     }
-    
+
     .middle-info-whatsapp{
         width: 30%;
     }
-    
+
     .middle-info p{
         font-size: 1em;
     }
-    
+
     .middle-banner-info{
         font-size: 0.65em;
     }
-    
+
     .middle-info-orcamento{
         margin-top: 5px;
     }
-    
+
     .middle-info-orcamento img{
         width: 50%;
         margin-left: 30px;
     }
-    
+
     .middle-info-orcamento p{
         font-size: 100%;
     }
-    
+
     .middle-info-compre{
         width: 100%;
     }
-    
+
     .middle-info-compre img{
         width: 40%;
     }
@@ -1141,24 +1181,23 @@
         font-size: 100%;
         margin-right: 10%;
     }
-    
+
     .end-faixa p{
         font-size: 100%;
     }
-    
+
     .end-info p{
         font-size: 1em;
     }
-    
+
     .melhorcustowhatsapp{
         width: 70%;
     }
-    
+
     .carousel{
         width: 250px;
-        height: auto;
     }
-    
+
     .carousel button img{
         width: 50%;
     }
@@ -1170,49 +1209,49 @@
     .carousel-button-next{
         right: 0px;
     }
-    
+
     .carrossel h2{
         font-size: 1.2em;
     }
-    
+
     .carrossel p{
         font-size: 1em;
     }
-    
+
     .formulario label{
         font-size: 0.44em;
     }
-    
+
     .formulario input{
         height: 15px;
     }
-    
+
     .formulario select{
         height: 18px;
         font-size: 0.8em;
     }
-    
+
     .form-group input{
         font-size: 0.7em;
     }
-    
+
     .pisos-div1 img{
         width: 70%;
         margin: 5% auto 2% auto;
     }
-    
+
     .topBox p{
-    font-size: 0.9em;
+        font-size: 0.9em;
     }
-    
+
     .submitBtn{
         font-size: 0.8em;
     }
-    
+
     .maisItem{
         font-size: 1.5em;
     }
-    
+
     .footer{
         display: flex;
         flex-direction: column;
@@ -1221,27 +1260,27 @@
         justify-content: center;
         flex: 1;
     }
-    
+
     .footer-logo{
         margin-top: 20px;
         width: 250px;
         margin-left: 25px;
     }
-    
+
     .footer-div1{
         display: block;
         flex-direction: column;
     }
-    
+
     .footer-div2{
         width: 100%;
     }
-    
+
     .footer-div2 .footer-whatsapp{
         margin-top: -25px;
         width: 50px;
     }
-    
+
     .footer-div2 p{
         margin-left: 10%;
     }
@@ -1252,11 +1291,11 @@
         padding: 2px;
         margin: 0;
     }
-    
+
     #celularLogos{
         justify-content: flex-start;
     }
-    
+
     .nav-bar .fa{
         padding-right: 30px;
         padding-top: 15px;
@@ -1267,7 +1306,7 @@
         cursor: pointer;
         text-align: right;
     }
-    
+
     .nav-links ul a li{
         padding: 0;
         padding-right: 3px;
@@ -1281,13 +1320,13 @@
         margin-left: -100px;
     }
 }
-    
+
 @media only screen and (min-width: 351px) and (max-width: 400px){
-    
+
     .middle-banner-info{
         font-size: 0.77em;
     }
-    
+
     .formulario label{
         font-size: 0.51em;
     }
@@ -1308,14 +1347,12 @@
 @media only screen and (min-width: 401px) and (max-width: 500px){
     .carousel{
         width: 350px;
-        height: auto;
-        align-self: flex-start;
     }
-    
+
     .middle-info-compre img{
         width: 60%;
     }
-    
+
     .formulario label{
         font-size: 0.58em;
     }
@@ -1325,48 +1362,46 @@
     .carousel button img{
         width: 70%;
     }
-    
+
     .middle-info{
         margin-top: -35px;
     }
-    
+
     .middle-info-compre img{
         width: 70%;
     }
-    
+
     .middle-banner-info{
         font-size: 1em;
     }
-    
+
     .end-faixa p{
         font-size: 1.4em;
     }
-    
+
     .carousel{
         width: 450px;
-        height: auto;
-        align-self: flex-start;
     }
-    
+
     .formulario label{
         font-size: 0.7em;
     }
-    
+
 }
 
 @media only screen and (min-width: 551px) and (max-width: 600px){
     .middle-info-msg{
         width: 75%;
     }
-    
+
     .middle-info-whatsapp{
         width: 25%;
     }
-    
+
     .middle-banner-info{
         font-size: 1.1em;
     }
-    
+
     .formulario label{
         font-size: 0.8em;
     }
@@ -1376,45 +1411,43 @@
     .carousel button img{
         width: 80%;
     }
-    
+
     .middle-info-orcamento p a img{
         width: 60%;
     }
-    
+
     .middle-info{
         margin-top: -38px;
     }
-    
+
     .middle-info-msg{
         width: 75%;
     }
-    
+
     .middle-info-whatsapp{
         width: 25%;
     }
-    
+
     .middle-info-compre img{
         width: 70%;
     }
-    
+
     .middle-banner-info{
         font-size: 1.2em;
     }
-    
+
     .carousel{
         width: 500px;
-        height: auto;
-        align-self: flex-start;
     }
-    
+
     .end-faixa p{
         font-size: 1.6em;
     }
-    
+
     .formulario label{
         font-size: 0.8em;
     }
-    
+
     #celularLogos{
         width: 210px;
     }
@@ -1435,136 +1468,134 @@
         margin: 20px 0px 0px 40px;
         width: 150px;
     }  
-    
+
     .nav-links ul{
         margin-left: 20px;
     }
-    
+
     .nav-links ul a li{
         padding: 2%;
     }
-    
+
     .nav-bar .fa{
         display: none;
         width: 0;
         background-color: yellow;
     }
-    
+
     .nav-bar i{
         display: none;
     }
-    
+
     .social-logos{
         margin: 5px;
     }
-    
+
     .middle-info-orcamento p a img{
         width: 60%;
         margin-left: 30%;
     }
-    
+
     .middle-info-msg p{
         font-size: 1.4em;
     }
-    
+
     .pisos-div1 img{
-        width: 65%;
-        margin: 5% auto 2% auto;
+        width: 70%;
+        margin: 5% 15% 2% 15%;
     }
-    
+
     .middle-info-whatsapp img{
         margin-top: -5px;
         width: 50%;
     }
-    
+
     .middle-banner-info{
         font-size: 1.5em;
     }
-    
+
     .middle-info-orcamento p{
         font-size: 1.5em;
     }
-    
+
     .middle-info-orcamento img{
         width: 50%;
         margin-left: 50%;
     }
-    
+
     .middle-info-compre p{
         font-size: 2em;
     }
-    
+
     .middle-info-compre img{
         width: 70%;
     }
-    
+
     .melhorcustowhatsapp{
         width: 100%;
     }
-    
+
     .end-info p{
         font-size: 2em;
     }
-    
+
     .carousel{
         width: 600px;
-        height: auto;
-        align-self: flex-start;
     }
-    
+
     .end-faixa p{
         font-size: 2em;
     }
-    
+
     .formulario label{
         font-size: 1em;
     }
-    
+
     .maisItem{
         font-size: 2em;
     }
-    
+
     .submitBtn{
         font-size: 1.4em;
         width: 30%;
         margin: 0px auto 10px auto;
     }
-    
+
     .footer{
         align-content: center;
         align-items: center;
         justify-content: center;
     }
-    
+
     .footer-logo{
         margin-top: 20px;
         width: 250px;
         margin-left: 25px;
     }
-    
+
     .footer-div1{
         display: flex;
         flex-wrap: wrap;
     }
-    
+
     .footer-dimensional-logo{
         width: 100%;
     }
-    
+
     .footer-dimensional-logo img{
         margin-left: 200px;
         margin-bottom: 20px;
     }
-    
+
     .div-footer{
         padding: 3px;
     }
-    
+
     .footer-div2 .footer-whatsapp{
         margin-top: -30px;
         width: 50px;
     }
-    
+
     .footer-div2 p{
         margin-left: 20%;
     }   
@@ -1574,22 +1605,20 @@
     .nav-links ul{
         margin-left: 15%;
     }
-    
+
     .middle-banner-info{
         font-size: 1.7em;
     }
-    
+
     .carousel{
         width: 700px;
-        height: auto;
-        align-self: flex-start;
-        
+
     }
-    
+
     .footer-dimensional-logo img{
         margin-left: 35%;
     }
-    
+
     .div-footer{
         padding: 10px;
     }
@@ -1604,53 +1633,53 @@
         margin: 20px 0px 0px 40px;
         width: 150px;
     }
-    
+
     .nav-links ul{
         margin-left: 8%;
     }
-    
+
     .nav-links ul a li{
         padding: 2.5% 4%;
     }
-    
+
     .social-logos{
         margin: 10px;
     }
-    
+
     .middle-info-orcamento p a img{
         width: 65%;
         margin-left: 30%;
     }
-    
+
     .middle-info p{
         font-size: 1.8em;
     }
-    
+
     .middle-info img{
         margin-top: -5px;
     }
     .middle-banner p{
         font-size: 2em;
     }
-    
+
     .submitBtn{
         width: 30%;
         margin: 0px auto 10px auto;
     }
-    
+
     .middle-info-orcamento p{
         font-size: 1.9em;
     }
-    
+
     .middle-info-orcamento img{
         width: 60%;
         margin-left: 50%;
     }
-    
+
     .melhorcustowhatsapp{
         width: 100%;
     }
-    
+
     .div-footer{
         padding: 5px 5px;
     }
@@ -1665,45 +1694,45 @@
         margin: 20px 0px 0px 100px;
         width: 200px;
     }
-    
+
     .nav-links ul{
         margin-left: 10%;
     }
-    
+
     .nav-links ul a li{
         padding: 2.5% 5%;
     }
-    
+
     .social-logos{
         margin: 10px 20px 0 0;
     }
-    
+
     .middle-info-orcamento p a img{
         width: 70%;
         margin-left: 25%;
     }
-    
+
     .middle-info-whatsapp{
         margin-top: -10px;
     }
-    
+
     .middle-banner p{
         font-size: 2.3em;
     }
-    
+
     .middle-info-orcamento p{
         font-size: 2.2em;
     }
-    
+
     .middle-info-orcamento img{
         width: 80%;
         margin-left: 30%;
     }
-    
+
     .melhorcustowhatsapp{
         width: 90%;
     }
-    
+
     .end-info p{
         font-size: 2em;
     }
@@ -1714,7 +1743,7 @@
         font-size: 2.7em;
         margin-left: 410px;
     }
-    
+
     .fixed{
         width: 1366px;
     }
